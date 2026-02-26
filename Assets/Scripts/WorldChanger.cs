@@ -11,17 +11,14 @@ public class WorldChanger : MonoBehaviour
   [Header("Settings")]
   public float lookAwayThreshold = -0.5f;
 
-  /*
   private bool playerPassedTrigger = false;
   private bool worldHasChanged = false;
-  */
 
   private void Awake()
   {
     newChange.SetActive(false);
   }
 
-  /*
   private void OnTriggerEnter(Collider other)
   {
     if (other.CompareTag("Player"))
@@ -30,13 +27,10 @@ public class WorldChanger : MonoBehaviour
       Debug.Log("Step 1: Player passed trigger. Ready to switch when look away.");
     }
   }
-  */
 
   private void Update()
   {
-    /*
     if (worldHasChanged || !playerPassedTrigger) return;
-    */
 
     Vector3 directionToTarget = Vector3.Normalize(transform.position - player.position);
 
@@ -52,8 +46,6 @@ public class WorldChanger : MonoBehaviour
   private void ExecuteChange()
   {
     newChange.SetActive(true);
-    /*
     worldHasChanged = true;
-    */
   }
 }
